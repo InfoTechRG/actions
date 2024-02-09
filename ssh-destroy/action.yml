@@ -1,0 +1,8 @@
+name: ssh-destroy
+description: Remove all SSH configurations from a GitHub Actions runner
+runs:
+  using: composite
+  steps:
+    - name: Destroy SSH Configuration
+      shell: bash
+      run: rm -rf "$HOME/.ssh"

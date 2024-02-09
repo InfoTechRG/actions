@@ -1,0 +1,19 @@
+name: ssh-create
+description: Add an SSH key to a GitHub Actions runner
+inputs:
+  ssh-key:
+    description: GitHub SSH Key
+    required: true
+  known-hosts:
+    description: GitHub Known Hosts
+    required: true
+runs:
+  using: composite
+  steps:
+    - name: Setup GitHub SSH
+      shell: bash
+      run: |
+        mkdir -p "$HOME/.ssh"
+        echo "${{ inputs.ssh-key }}" >> "$HOME/.ssh/id_ed25519"
+        chmod 600 "$HOME/.ssh/id_ed25519"
+        echo "${{ inputs.known-hosts }}" >> "$HOME/.ssh/known_hosts"
