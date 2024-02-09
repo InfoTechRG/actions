@@ -1,4 +1,4 @@
-# Reusable GitHub Actions
+# Public GitHub Actions
 
 ### Contents
 
