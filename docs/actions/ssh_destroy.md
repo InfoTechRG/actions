@@ -15,7 +15,7 @@ Add the following step to any workflow:
 
 ```yaml
 - name: Destroy SSH Config
-  uses: InfoTechRG/actions/ssh-destroy
+  uses: InfoTechRG/actions/ssh-destroy@main
 ```
 
 ---
