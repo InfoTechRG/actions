@@ -15,7 +15,7 @@ Add the following step to any workflow:
 
 ```yaml
 - name: Create SSH Config
-  uses: InfoTechRG/actions/ssh-create
+  uses: InfoTechRG/actions/ssh-create@main
   with:
     ssh-key: ${{ secrets.SSH_KEY }}
     known-hosts: ${{ secrets.KNOWN_HOSTS }}
